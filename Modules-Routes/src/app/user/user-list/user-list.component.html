@@ -1,0 +1,9 @@
+<div class="user-list-wrapper">
+    <h1>User List</h1>
+    <hr />
+    <ul>
+        <li *ngFor="let user of userList">
+            {{ user.username}} || {{ user.name }} - {{ user.id }} - {{ user.email }}
+        </li>
+    </ul>
+</div>
