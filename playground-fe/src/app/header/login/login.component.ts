@@ -31,4 +31,9 @@ export class LoginComponent implements OnInit {
       this.tokenService.setToken(token);
     });
   }
+
+  updateEmail(event: any) {
+    // autofill from the browser sends empty payload in email field, this prevents it
+    this.loginForm.get('email')?.setValue(event.target.value);
+  }
 }

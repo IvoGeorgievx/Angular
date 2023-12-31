@@ -1,6 +1,6 @@
 <form [formGroup]="loginForm" (submit)="onSubmit()">
     <label for="email">Email</label>
-    <input id="email" type="email" formControlName="email">
+    <input id="email" type="email" formControlName="email" (change)="updateEmail">
     <label for="password">Password</label>
     <input id="password" type="password" formControlName="password">
     <button>Login !</button>
