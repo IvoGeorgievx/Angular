@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { AuthService } from 'src/app/services/auth.service';
-import { TokenService } from 'src/app/services/token.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
+import { TokenService } from 'src/app/services/token/token.service';
 
 @Component({
   selector: 'app-login',
@@ -29,8 +29,6 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     const userData = this.loginForm.value;
     this.authService.login(userData).subscribe((result: any) => {
-      const token = result.token;
-      this.tokenService.setToken(token);
       this.router.navigate(['/']);
     });
   }

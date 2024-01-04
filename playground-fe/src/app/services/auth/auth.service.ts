@@ -3,8 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs';
 
-import { UserData } from '../types/reg.type';
-import { TokenService } from './token.service';
+import { UserData } from '../../types/reg.type';
+import { TokenService } from '../token/token.service';
 
 @Injectable({
   providedIn: 'root',

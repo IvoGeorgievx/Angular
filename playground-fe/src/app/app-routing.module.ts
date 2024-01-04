@@ -5,6 +5,7 @@ import { NavComponent } from './header/nav/nav.component';
 import { LoginComponent } from './header/login/login.component';
 import { CurrentUserComponent } from './header/current-user/current-user.component';
 import { LogoutComponent } from './header/logout/logout.component';
+import { TodosComponent } from './main/todos/todos.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'users/me',
     component: CurrentUserComponent,
+  },
+  {
+    path: 'my-todos',
+    component: TodosComponent,
   },
 ];
 
