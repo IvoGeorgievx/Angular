@@ -4,6 +4,7 @@ import { RegistrationComponent } from './header/registration/registration.compon
 import { NavComponent } from './header/nav/nav.component';
 import { LoginComponent } from './header/login/login.component';
 import { CurrentUserComponent } from './header/current-user/current-user.component';
+import { LogoutComponent } from './header/logout/logout.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent,
   },
   {
     path: 'users/me',

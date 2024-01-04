@@ -5,6 +5,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { CurrentUserComponent } from './current-user/current-user.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -12,8 +13,14 @@ import { CurrentUserComponent } from './current-user/current-user.component';
     RegistrationComponent,
     LoginComponent,
     CurrentUserComponent,
+    LogoutComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule],
-  exports: [NavComponent, RegistrationComponent, LoginComponent],
+  exports: [
+    NavComponent,
+    RegistrationComponent,
+    LoginComponent,
+    LogoutComponent,
+  ],
 })
 export class HeaderModule {}
