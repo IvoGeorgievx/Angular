@@ -3,5 +3,5 @@
         <div>{{todo.id}}</div>
         <div>{{todo.title}}</div>
         <div>{{todo.completed}}</div>
-        <button>Done</button>
+        <button (click)="markAsCompleted(todo)">Done</button>
     </div>

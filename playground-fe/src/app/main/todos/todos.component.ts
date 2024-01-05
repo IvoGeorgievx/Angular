@@ -17,4 +17,10 @@ export class TodosComponent implements OnInit {
       console.log(this.todos);
     });
   }
+
+  markAsCompleted(todo: Todo) {
+    this.todoService.markAsCompleted(todo).subscribe((todo: Todo) => {
+      console.log(todo);
+    });
+  }
 }
