@@ -7,6 +7,7 @@ import { CurrentUserComponent } from './header/current-user/current-user.compone
 import { LogoutComponent } from './header/logout/logout.component';
 import { TodosComponent } from './main/todos/todos.component';
 import { CreateTodoComponent } from './main/create-todo/create-todo.component';
+import { HomeComponent } from './main/home/home.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: NavComponent,
+    component: HomeComponent,
   },
   {
     path: 'register',

@@ -1,7 +1,13 @@
 <nav>
     <a routerLink="/home">Home</a>
-    <a routerLink="/my-todos">My To Dos</a>
-    <a routerLink="/create-todo">Create To Do</a>
+    <ng-container *ngIf="(loggedIn$ | async); else guestLinks">
+        <a routerLink="/create-todo">Create ToDo</a>
+        <a routerLink="/my-todos">My ToDos</a>
+    </ng-container>
+    <ng-template #guestLinks>
+        <a routerLink="/login">Login</a>
+        <a routerLink="/register">Register</a>
+    </ng-template>
 </nav>
 
 <app-logout />
