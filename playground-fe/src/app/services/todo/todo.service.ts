@@ -19,9 +19,13 @@ export class TodoService {
   markAsCompleted(todo: Todo) {
     const token = this.tokenService.getToken();
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.http.put<Todo>(`${this.url}/todos/${todo.id}`, {
-      headers,
-    });
+    return this.http.put<Todo>(
+      `${this.url}/todos/${todo.id}`,
+      {},
+      {
+        headers,
+      }
+    );
   }
 
   createTodo(data: Todo) {
