@@ -15,7 +15,6 @@ export class CreateTodoComponent {
   ) {
     this.toDoForm = this.formBuilder.group({
       title: [''],
-      description: [''],
     });
   }
 

@@ -24,7 +24,7 @@ export class TodoService {
     });
   }
 
-  createTodo(data: object) {
+  createTodo(data: Todo) {
     const token = this.tokenService.getToken();
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.post<Todo>(`${this.url}/todos/create`, data, {
