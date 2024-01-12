@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "playground-fe:build:production"
+              "buildTarget": "playground-fe:build:production"
             },
             "development": {
-              "browserTarget": "playground-fe:build:development"
+              "buildTarget": "playground-fe:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "playground-fe:build"
+            "buildTarget": "playground-fe:build"
           }
         },
         "test": {
