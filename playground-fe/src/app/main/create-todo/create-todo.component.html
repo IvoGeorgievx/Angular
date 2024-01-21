@@ -1,5 +1,11 @@
 <form [formGroup]="toDoForm" (submit)="onSubmit()">
-    <label for="title">Title</label>
-    <input id="title" type="text" formControlName="title">
-    <button>Create</button>
+  <div class="h-screen flex justify-center items-center flex-col gap-y-4">
+    <ion-list class="rounded w-1/4 h-1/12 flex flex-col" >
+      <ion-item>
+        <ion-label position="floating">Task</ion-label>
+        <ion-input type="text" formControlName="title"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit" class="w-1/12" color="success">Create Task</ion-button>
+  </div>
 </form>

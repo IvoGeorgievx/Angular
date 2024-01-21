@@ -1,9 +1,17 @@
-<div *ngIf="todos">
-    <div *ngFor="let todo of todos">
-        <div>{{todo.id}}</div>
-        <div>{{todo.title}}</div>
-        <div>{{todo.completed}}</div>
-        <button (click)="markAsCompleted(todo)">Done</button>
-    </div>
-</div>
+<ion-list>
+  <ion-list-header>
+    <ion-label>
+      Your ToDo List
+    </ion-label>
+  </ion-list-header>
+  <ion-item *ngFor="let todo of todos">
+    <ion-label>{{ todo.title }}</ion-label>
+    <ion-label *ngIf="todo.completed; else notCompletedLabel">Completed</ion-label>
+    <ng-template #notCompletedLabel>
+      <ion-label>Not Completed</ion-label>
+    </ng-template>
+    <ion-button (click)="markAsCompleted(todo)" color="success">Complete</ion-button>
+  </ion-item>
+
+</ion-list>
 

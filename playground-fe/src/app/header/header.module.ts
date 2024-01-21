@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { CurrentUserComponent } from './current-user/current-user.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RouterModule } from '@angular/router';
+import {IonicModule} from "@ionic/angular";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { RouterModule } from '@angular/router';
     CurrentUserComponent,
     LogoutComponent,
   ],
-  imports: [CommonModule, ReactiveFormsModule, RouterModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, IonicModule],
   exports: [
     NavComponent,
     RegistrationComponent,

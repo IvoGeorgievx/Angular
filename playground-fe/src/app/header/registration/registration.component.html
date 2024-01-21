@@ -1,8 +1,17 @@
 <!-- Should import Reactive Forms module in the Header Module -->
 <form [formGroup]="regForm" (submit)="onSubmit()">
-    <label for="email">Email</label>
-    <input id="email" type="email" formControlName="email">
-    <label for="password">Password</label>
-    <input id="password" type="password" formControlName="password">
-    <button>Register</button>
+  <div class=" h-screen flex items-center justify-center flex-col gap-y-4">
+      <ion-list class="rounded p-2 pb-7 w-1/4 h-1/5 flex flex-col justify-center space-y-4">
+        <ion-title class="text-center text-white mt-5 text-3xl">Register</ion-title>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-button type="submit" class="w-1/12" color="success">Register</ion-button>
+  </div>
 </form>
