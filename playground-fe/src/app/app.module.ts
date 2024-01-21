@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MainModule } from './main/main.module';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { MainModule } from './main/main.module';
     HeaderModule,
     MainModule,
     HttpClientModule,
+    IonicModule.forRoot({}),
   ],
   providers: [],
   bootstrap: [AppComponent],

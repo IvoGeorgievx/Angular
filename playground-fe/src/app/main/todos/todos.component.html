@@ -7,32 +7,3 @@
     </div>
 </div>
 
-<p-table [value]="todos" [tableStyle]="{'min-width': '10rem'}">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>Code</th>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Actions</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-todo>
-        <tr [ngClass]="{'row-accessories': todo.completed === 'true'}">
-            <td>{{todo.title}}</td>
-            <td>{{todo.title}}</td>
-            <td>
-                <div [ngClass]="{'completed': todo.completed, 'not-completed': !todo.completed}">
-                    {{todo.completed}}
-                </div>
-            </td>
-            <td>
-                <div *ngIf="todo.completed; else notCompleted">
-                    <p-button label="Undo" severity="danger" (onClick)="markAsCompleted(todo)"></p-button>
-                </div>
-                <ng-template #notCompleted>
-                    <p-button label="Done it :)" severity="success" (onClick)="markAsCompleted(todo)"></p-button>
-                </ng-template>
-            </td>
-        </tr>
-    </ng-template>
-</p-table>
